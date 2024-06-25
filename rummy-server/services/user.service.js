@@ -12,7 +12,7 @@ class UserService {
   }
 
   async findUserByUsername(username) {
-    return await User.findOne({ where: { username: username } });
+      return await User.findOne({ where: { userName: username } });
   }
 
   // Autres méthodes pour gérer les utilisateurs...

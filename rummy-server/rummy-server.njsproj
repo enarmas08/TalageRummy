@@ -46,10 +46,7 @@
     <Content Include="index.js" />
     <Content Include="middleware\authAPIMiddleware.js" />
     <Content Include="middleware\authSocketMiddleware.js" />
-    <Content Include="models\card.model.js" />
-    <Content Include="models\game.model.js" />
     <Content Include="models\player.model.js" />
-    <Content Include="models\room.model.js" />
     <Content Include="models\user.model.js" />
     <Content Include="jsconfig.json" />
     <Content Include="package.json" />
@@ -58,7 +55,7 @@
     <Content Include="routes\api\room.route.js" />
     <Content Include="routes\api\user.route.js" />
     <Content Include="routes\index.js" />
-    <Content Include="services\room.service.js" />
+    <Content Include="services\player.service.js" />
     <Content Include="services\user.service.js" />
     <Content Include="sockets\lobby.socket.js" />
     <Content Include="sockets\index.js" />

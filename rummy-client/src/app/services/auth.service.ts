@@ -16,7 +16,7 @@ export class AuthService {
 
   constructor(private http: HttpClient, private appContexte: AppContexte, private socketService: SocketService) { }
 
-  login(user: { username: string, password: string }): Observable<any> {
+  login(user: { userName: string, password: string }): Observable<any> {
     return this.http.post(`${this.apiUrl}/users/login`, user).pipe(
       tap((response: any) => {
         if (response?.token) {
@@ -32,7 +32,7 @@ export class AuthService {
     );
   }
 
-  register(user: { username: string, email: string, password: string }): Observable<any> {
+  register(user: { userName: string, email: string, password: string }): Observable<any> {
     return this.http.post(`${this.apiUrl}/users/register`, user)
       .pipe(catchError(ServicesHelper.handleError));
   }

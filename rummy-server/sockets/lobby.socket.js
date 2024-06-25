@@ -1,6 +1,4 @@
-const Game = require('../models/game.model');
 const Player = require('../models/player.model');
-const Room = require('../models/room.model');
 
 module.exports = (io, socket) => {
 
