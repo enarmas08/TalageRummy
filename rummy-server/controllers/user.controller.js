@@ -1,4 +1,5 @@
 const userService = require('../services/user.service');
+const playerService = require('../services/player.service');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const CONST = require('./../config/const'); // Chemin vers le fichier de configuration Sequelize
@@ -12,7 +13,10 @@ class UserController {
 
             if (user && bcrypt.compareSync(userData.password, user.password)) {
                 const token = jwt.sign({ id: user.id, email: user.email }, CONST.TOKEN_SECRET, { expiresIn: CONST.TOKEN_EXPIRE_SEC });
-                res.json({ token, userId: user.id });
+
+                const player = await playerService.findPlayerByUserId(user.id);
+
+                res.json({ token, player: player });
             } else {
                 res.status(401).send('Invalid User');
             }
@@ -28,7 +32,8 @@ class UserController {
             userData.password = await bcrypt.hash(userData.password, 5);
 
             const user = await userService.createUser(userData);
-            res.status(201).send("OK");
+            await playerService.createPlayer({ userId: user.id, userName: user.userName });
+            res.status(201).json({ created: true });
         } catch (error) {
             res.status(400).json({ error: error.message });
         }

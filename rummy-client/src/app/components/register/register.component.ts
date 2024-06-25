@@ -9,7 +9,7 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
-  user: { username: string, email: string, password: string } = { username: '', email: '', password: '' };
+  user: { userName: string, email: string, password: string } = { userName: '', email: '', password: '' };
   errorMessage: string = '';
 
   constructor(private authService: AuthService, private router: Router) {

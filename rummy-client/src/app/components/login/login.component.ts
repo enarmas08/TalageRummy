@@ -9,7 +9,7 @@ import { User } from 'src/app/models/user.model';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  user: { username: string, password: string } = { username: '', password: '' };
+  user: { userName: string, password: string } = { userName: '', password: '' };
   errorMessage: string = '';
 
   constructor(private authService: AuthService, private router: Router) {
