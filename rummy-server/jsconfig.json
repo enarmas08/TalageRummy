@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // Spécifie la version ECMAScript à laquelle vous ciblez
+    "checkJs": true, // Active la vérification de syntaxe JavaScript
+    "allowSyntheticDefaultImports": true, // Autorise les importations synthétiques par défaut
+    "noImplicitAny": false, // Empêche l'utilisation implicite de 'any' pour les types
+    "strict": true // Active tous les contrôles stricts possibles
+  },
+  "exclude": [
+    "node_modules" // Exclut les fichiers et répertoires spécifiés du processus de recherche de projet
+  ]
+}

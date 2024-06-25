@@ -1,0 +1,27 @@
+{
+    "development": {
+        "host": "localhost",
+        "user": "root",
+        "password": "",
+        "database": "rummy_db",
+        "dialect": "mysql",
+        "pool": {
+            "max": 10,
+            "min": 0,
+            "acquire": 30000
+        }
+    },
+    "test": {
+        "host": "localhost",
+        "user": "root",
+        "password": "",
+        "database": "rummy_db_test",
+        "dialect": "mysql",
+        "pool": {
+            "max": 10,
+            "min": 0,
+            "acquire": 30000
+        }
+    },
+    "production": {}
+}

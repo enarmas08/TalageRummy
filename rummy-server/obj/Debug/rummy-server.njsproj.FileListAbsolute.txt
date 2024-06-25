@@ -1,0 +1,3 @@
+C:\Users\enarmas\Documents\MyFolder\AACours_y\Plans\Plan W\POC\TalageRummy\rummy-server\obj\Debug\rummy-server.njsproj.AssemblyReference.cache
+C:\Users\enarmas\Documents\MyFolder\AACours_y\Plans\Plan W\POC\TalageRummy\rummy-server\obj\Debug\rummy-server.njsproj.CoreCompileInputs.cache
+C:\Users\enarmas\Documents\MyFolder\AACours_y\Plans\Plan W\POC\TalageRummy\rummy-server\bin\Microsoft.NodejsTools.WebRole.dll

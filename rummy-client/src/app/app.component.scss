@@ -1,0 +1,26 @@
+.app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  nav {
+    ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      gap: 1rem;
+  
+      li {
+        a {
+          text-decoration: none;
+          color: #007bff;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  

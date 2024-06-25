@@ -1,0 +1,11 @@
+<div class="rooms-container">
+  <h2>message : {{message}}</h2>
+  <form (ngSubmit)="onExit()">
+    <button type="submit">get current user</button>
+  </form>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Contenu pour gérer les salles de jeu -->
+</div>
