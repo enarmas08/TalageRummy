@@ -1,11 +1,7 @@
-<div class="rooms-container">
-  <h2>message : {{message}}</h2>
-  <form (ngSubmit)="onExit()">
-    <button type="submit">get current user</button>
-  </form>
-  <div *ngIf="errorMessage" class="error-message">
-    {{ errorMessage }}
+<div [@listAnimation]="playersInRows.length">
+  <div *ngFor="let row of playersInRows" class="player-row">
+    <div *ngFor="let player of row" class="player-item">
+      {{ player.userName }}
+    </div>
   </div>
-
-  <!-- Contenu pour gérer les salles de jeu -->
 </div>

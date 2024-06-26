@@ -14,7 +14,7 @@ export class Player {
   /**
   * obtient ou définie 
   */
-  public username!: string;
+  public userName!: string;
 
   /**
    * obtient ou définie 

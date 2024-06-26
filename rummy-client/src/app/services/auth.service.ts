@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { catchError, tap } from 'rxjs/operators';
+import { catchError, map, tap } from 'rxjs/operators';
 import { URL_API } from '../resources/const';
 import { User } from '../models/user.model';
 import { ServicesHelper } from '../resources/helpers/services.helper';
@@ -24,8 +24,8 @@ export class AuthService {
           this.socketService.connect(response.token);
         }
 
-        if (response?.userId) {
-          this.appContexte.userId = response.userId;
+        if (response?.player) {
+          this.appContexte.player = response.player;
         }
       }),
       catchError(ServicesHelper.handleError)
@@ -37,9 +37,15 @@ export class AuthService {
       .pipe(catchError(ServicesHelper.handleError));
   }
 
-  logout(): void {
-    localStorage.removeItem('jwt');
-    this.socketService.disconnect();
+  logout(userId: number): Observable<void> {
+
+    return this.http.get(`${this.apiUrl}/users/logout/${userId}`, { headers: ServicesHelper.getHttpHeaders() })
+      .pipe(
+        map(() => {
+          localStorage.removeItem('jwt');
+          //this.socketService.disconnect();
+          return;
+        }), catchError(ServicesHelper.handleError));
   }
 
   isLoggedIn(): boolean {

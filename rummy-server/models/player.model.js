@@ -31,6 +31,11 @@ const Player = sequelize.define('Player', {
         defaultValue: 0,
         field: 'totallose'
     },
+    isConnect: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false,
+        field: 'isconnect'
+    },
     createdAt: {
         type: DataTypes.DATE,
         allowNull: false,

@@ -16,7 +16,6 @@ import { AppContexte } from './resources/helpers/app-contexte.helper';
 import { LobbySocketService } from './services/sockets/lobby.socket.service';
 import { SocketService } from './services/sockets/socket.service';
 import { ErrorDialogComponent } from './components/error-dialog/error-dialog.component';
-import { ErrorHandlingService } from './services/error-handling.service';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -36,7 +35,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserAnimationsModule,
     MatDialogModule
   ],
-  providers: [AuthService, UserService, AppContexte, LobbySocketService, SocketService, ErrorHandlingService, AuthGuard],
+  providers: [AuthService, UserService, AppContexte, LobbySocketService, SocketService, AuthGuard],
   bootstrap: [AppComponent],
   entryComponents: [ErrorDialogComponent]
 })

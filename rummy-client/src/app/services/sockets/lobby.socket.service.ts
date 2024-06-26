@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Player } from '../../models/player.model';
 import { AppContexte } from '../../resources/helpers/app-contexte.helper';
 import { SocketService } from './socket.service';
 
@@ -10,19 +11,24 @@ export class LobbySocketService {
   constructor(private socketService: SocketService) {
   }
 
-  playerJoinLobby(playerID: number): void {
-    this.socketService.socket.emit('joinLobby');
+  playerJoinLobby(player: Player): void {
+    this.socketService.socket.emit('joinLobby', player);
   }
 
-  playerExitFromLobby(playerID: number): void {
-    this.socketService.socket.emit('leaveLobby');
+  playerExitFromLobby(playerId: number): void {
+    this.socketService.socket.emit('leaveLobby', playerId);
   }
 
-  messageFromLobby(callBack: (message: string) => void): void {
-    this.socketService.socket.on('message', (message: string) => {
-      callBack(message);
+  playerAdded(callBack: (player: Player) => void): void {
+    this.socketService.socket.on('playerAdded', (player: Player) => {
+      callBack(player);
     });
+  }
 
+  playerDeleted(callBack: (playerId: number) => void): void {
+    this.socketService.socket.on('playerDeleted', (playerId: number) => {
+      callBack(playerId);
+    });
   }
 
 

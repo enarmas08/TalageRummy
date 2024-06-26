@@ -15,7 +15,7 @@ export class SocketService {
 
   constructor(private dialog: MatDialog) {
   }
-
+   
   connect(token: string): void {
     if (!this.socket?.connected) {
       this.socket = io(this.url, {

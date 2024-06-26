@@ -3,6 +3,7 @@ import { User } from "src/app/models/user.model";
 import { io, Socket } from 'socket.io-client';
 import { URL_SERVER } from "../const";
 import { SocketService } from "../../services/sockets/socket.service";
+import { Player } from "../../models/player.model";
 
 
 /**
@@ -16,7 +17,7 @@ export class AppContexte {
   /**
    * Utilisateur connecté
    */
-  public userId!: number;
+  public player!: Player;
 
   constructor(private socketService: SocketService) {
 

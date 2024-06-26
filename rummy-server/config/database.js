@@ -16,7 +16,7 @@ const sequelize = new Sequelize(
         dialect: dbOptions.dialect,
         host:dbOptions.host,
         pool: dbOptions.pool,
-        logging: false
+        logging:false /*console.log*/
     },
 );
 

@@ -1,6 +1,3 @@
-import { Inject, Injectable } from "@angular/core";
-import { ErrorHandlingService } from "../services/error-handling.service";
-import { OnInit } from '@angular/core';
 import { ErrorDialogComponent } from "../components/error-dialog/error-dialog.component";
 import { MatDialog } from "@angular/material/dialog";
 
