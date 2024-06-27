@@ -2,6 +2,7 @@
   <div *ngFor="let row of playersInRows" class="player-row">
     <div *ngFor="let player of row" class="player-item">
       {{ player.userName }}
+      <button (click)="openSendInvitationDialog(player)">Inviter</button>
     </div>
   </div>
 </div>

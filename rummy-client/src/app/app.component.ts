@@ -13,7 +13,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class AppComponent extends ComponentBase implements OnInit {
   title = 'Rummy Game';
 
-  constructor(public authService: AuthService, private router: Router, private app: AppContexte, dialog: MatDialog) {
+  constructor(public authService: AuthService, private router: Router, public app: AppContexte, dialog: MatDialog) {
     super(dialog);
   }
 
@@ -24,7 +24,7 @@ export class AppComponent extends ComponentBase implements OnInit {
       next: () => {
         this.router.navigate(['/login']);
       },
-      error: (err) => this.errorManager(err.message)
+      error: (err) => this.managerError(err)
     });
   }
 

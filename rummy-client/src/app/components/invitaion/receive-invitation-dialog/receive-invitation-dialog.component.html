@@ -1,0 +1,11 @@
+<h2>Invitation of {{ data.fromPlayer.userName }}</h2>
+<div>
+  <label>Type of game: {{ data.gameType | filterGameType }}</label>
+
+  <p>Time left : {{ countdown }} secondes</p>
+</div>
+
+<div>
+  <button (click)="acceptInvite()">accept</button>
+  <button (click)="refuseInvite()">refuse</button>
+</div>

@@ -19,9 +19,7 @@ export class AppContexte {
    */
   public player!: Player;
 
-  constructor(private socketService: SocketService) {
-
-  }
+  constructor(private socketService: SocketService) { }
 
   /**
    * déconnecté la socket

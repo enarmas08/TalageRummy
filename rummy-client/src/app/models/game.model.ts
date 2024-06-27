@@ -1,6 +1,6 @@
 import { Card } from "./card.model";
-import { gameType } from "./enums/gameType.model";
-import { Player } from "./player.model";
+import { GameType } from "./enums/gameType.enum";
+import { PlayerGame } from "./player-game.model";
 import { Round } from "./round.model";
 
 /**
@@ -11,7 +11,7 @@ export class Game {
   /**
    * obtient ou définie 
    */
-  public players: Player[] = [];
+  public players: PlayerGame[] = [];
 
   /**
    * obtient ou définie 
@@ -26,7 +26,7 @@ export class Game {
   /**
    * obtient ou définie 
    */
-  public gameType!: gameType;
+  public gameType!: GameType;
 
   constructor(init?: Partial<Game>) {
     Object.assign(this, init);

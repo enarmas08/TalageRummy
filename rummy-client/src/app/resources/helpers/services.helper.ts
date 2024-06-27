@@ -22,11 +22,11 @@ export class ServicesHelper {
         `message : ${error.error.message}`);
     }
     // Renvoyer un observable avec un message d'erreur convivial
-    return throwError(() => 'Une erreur est survenue, veuillez réessayer plus tard.');
+    return throwError(() => error);
   }
 
   public static getHttpHeaders(): HttpHeaders {
-    const token = localStorage.getItem('jwt'); // Retrieve token from local storage
+    const token = sessionStorage.getItem('jwt'); // Retrieve token from session storage
     return new HttpHeaders({ 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` });
   }
 }

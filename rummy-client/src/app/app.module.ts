@@ -18,6 +18,9 @@ import { SocketService } from './services/sockets/socket.service';
 import { ErrorDialogComponent } from './components/error-dialog/error-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReceiveInvitationDialogComponent } from './components/invitaion/receive-invitation-dialog/receive-invitation-dialog.component';
+import { SendInvitationDialogComponent } from './components/invitaion/send-invitation-dialog/send-invitation-dialog.component';
+import { FilterGameTypePipe } from './models/pipes/game-type.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LoginComponent,
     LobbyComponent,
     RegisterComponent,
-    ErrorDialogComponent
+    ErrorDialogComponent,
+    ReceiveInvitationDialogComponent,
+    SendInvitationDialogComponent,
+    FilterGameTypePipe
   ],
   imports: [
     BrowserModule,

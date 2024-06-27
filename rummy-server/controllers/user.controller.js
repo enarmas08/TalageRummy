@@ -21,7 +21,7 @@ class UserController {
                 const token = jwt.sign({ id: user.id, email: user.email }, CONST.TOKEN_SECRET, { expiresIn: CONST.TOKEN_EXPIRE_SEC });
 
                 let player = await playerService.findPlayerByUserId(user.id);
-                await playerService.connectOrDeconnectPlayer(user.id, true);
+                await playerService.connectOrDisconnectPlayer(user.id, true);
                 player.isConnect = true;
 
                 res.json({ token, player: player });
@@ -61,7 +61,7 @@ class UserController {
         try {
             const userId = req.params.id;
 
-            await playerService.connectOrDeconnectPlayer(userId, false);
+            await playerService.connectOrDisconnectPlayer(Number(userId), false);
 
             res.json();
 

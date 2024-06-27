@@ -10,7 +10,10 @@
       <li *ngIf="authService.isLoggedIn()">
         <a (click)="logout()">Logout</a>
       </li>
-    </ul>
+      <li *ngIf="authService.isLoggedIn()">
+        {{app.player? app.player.userName : ''}}
+      </li>
+    </ul>  
   </nav>
 
   <router-outlet></router-outlet>

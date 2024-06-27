@@ -1,11 +1,18 @@
-.rooms-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
-  }
-  
-  .error-message {
-    color: red;
-    margin-top: 1rem;
-  }
-  
+.player-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.player-item {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  text-align: center;
+  background: #f9f9f9;
+  transition: background 0.3s ease;
+}
+
+.player-item:hover {
+  background: #e0e0e0;
+}

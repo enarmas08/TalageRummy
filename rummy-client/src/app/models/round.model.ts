@@ -1,6 +1,6 @@
 import { Card } from "./card.model";
 import { Hand } from "./hand.model";
-import { Player } from "./player.model";
+import { PlayerGame } from "./player-game.model";
 
 /**
  * Classe de ronde
@@ -20,12 +20,12 @@ export class Round {
   /**
   * obtient ou définie 
   */
-  public players: Player[] = [];
+  public players: PlayerGame[] = [];
 
   /**
   * obtient ou définie 
   */
-  public playerTurn!: Player;
+  public playerTurn!: PlayerGame;
 
   constructor(init?: Partial<Round>) {
     Object.assign(this, init);

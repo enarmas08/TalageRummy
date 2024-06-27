@@ -2,7 +2,7 @@
 /**
  * Enume de type du jeu
  */
-export enum gameType {
+export enum GameType {
   SAMPLE,
   TALAGE
 }

@@ -1,4 +1,4 @@
-import { CardType } from "./enums/cardType.model";
+import { CardType } from "./enums/cardType.enum";
 
 /**
  * Classe de carte
